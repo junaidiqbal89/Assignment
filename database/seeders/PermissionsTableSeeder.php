@@ -41,10 +41,29 @@ class PermissionsTableSeeder extends Seeder
                 'title' => 'Edit Role',
                 'guard_name' => 'web'
             ],
+
             [
-                'group' => 'roles',
-                'name' => 'update_role',
-                'title' => 'Update Role',
+                'group' => 'products',
+                'name' => 'view_products',
+                'title' => 'View products',
+                'guard_name' => 'web'
+            ],
+            [
+                'group' => 'products',
+                'name' => 'add_product',
+                'title' => 'Add product',
+                'guard_name' => 'web'
+            ],
+            [
+                'group' => 'products',
+                'name' => 'delete_product',
+                'title' => 'Delete product',
+                'guard_name' => 'web'
+            ],
+            [
+                'group' => 'products',
+                'name' => 'edit_product',
+                'title' => 'Edit product',
                 'guard_name' => 'web'
             ],
         ];
