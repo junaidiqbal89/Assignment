@@ -10,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!  
-                    <button class="btn btn-primary"><a href="{{url('products')}}">Product</a></button>
+                    @can('view_products')
+                        <button class="btn btn-primary"><a href="{{url('products')}}">Product</a></button>
+                    @endcan
                     <button class="btn btn-primary"><a href="">User</a></button>
                 </div>
             </div>

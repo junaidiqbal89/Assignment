@@ -13,7 +13,9 @@
 
 <div class="container">
   <h2>Product Table</h2>
-  <a href="{{url('add-product')}}" class="btn btn-primary">Add Product</a>        
+  @can('add_product')
+  <a href="{{url('add-product')}}" class="btn btn-primary">Add Product</a>
+  @endcan     
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -36,8 +38,12 @@
         <td>{{$item->price}}</td>
         <td>{{$item->status}}</td>
         <td>
+            @can('delete_product')
             <a href="{{url('edit-product/'.$item->id)}}" class="btn btn-primary">Edit</a>
+            @endcan
+            @can('edit_product')
             <a href="{{url('delete-product/'.$item->id)}}" class="btn btn-danger">Delete</a>
+            @endcan
         </td>
       </tr>
       @endforeach
